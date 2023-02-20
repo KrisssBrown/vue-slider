@@ -16,18 +16,37 @@ createApp({
 				'./IMG/ellie-the-last-of-us-part-2-uhdpaper.com-hd-5.2478.jpg',
 				'./IMG/the_last_of_us_ps3_game-wide.jpg',
 			],
-
-			// 
 			currentIndex: 0,
-			slideIndex: images[i] 
+			
 
 		}
 	},
 
+
 	methods: {
-		// isActive(){
-		// 	if 
+		// lastIndex(){
+		// 	return this.images.slice(-1)[0]
 		// },
+
+		nextSlide() {
+			if (this.currentIndex < 5) {
+				this.currentIndex++
+			}else{
+				this.currentIndex = 0
+			}
+		},
+
+		prevSlide(){
+			if (this.currentIndex > 0) {
+				this.currentIndex--
+			}
+			// else{
+			// 	this.currentIndex = this.images.lastIndexOf()
+			// }
+		}
+
+
+
 
 
 	}
