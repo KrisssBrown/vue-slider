@@ -24,25 +24,26 @@ createApp({
 
 
 	methods: {
-		// lastIndex(){
-		// 	return this.images.slice(-1)[0]
-		// },
+		
 
 		nextSlide() {
-			if (this.currentIndex < 5) {
+			const lastIndex = this.images.length - 1
+			if (this.currentIndex < lastIndex) {
 				this.currentIndex++
 			}else{
 				this.currentIndex = 0
 			}
+			// console.log
 		},
 
 		prevSlide(){
+			const lastIndex = this.images.length - 1
 			if (this.currentIndex > 0) {
 				this.currentIndex--
+			}else{
+				this.currentIndex = lastIndex
 			}
-			// else{
-			// 	this.currentIndex = this.images.lastIndexOf()
-			// }
+			
 		}
 
 
